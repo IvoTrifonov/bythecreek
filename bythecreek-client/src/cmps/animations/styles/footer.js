@@ -1,7 +1,7 @@
 const footerStyles = {
-  from: { marginTop: '15em', opacity: 0 },
-  to: { marginTop: '0em', opacity: 0.90 },
-  config: { duration: 280 }
+  from: { transform: 'translateY(100%)' },
+  to: { transform: 'translateY(0)' },
+  config: { duration: 230 }
 }
 
 export default footerStyles;

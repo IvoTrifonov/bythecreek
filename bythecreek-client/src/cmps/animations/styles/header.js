@@ -1,7 +1,8 @@
+
 const headerStyles = {
-  from: { marginTop: '-5em', opacity: 0 },
-  to: { marginTop: '0.5em', opacity: 0.9 },
-  config: { duration: 280 }
+  from: { transform: 'translateY(-100%)' },
+  to: { transform: 'translateY(0)' },
+  config: { duration: 230 }
 }
 
 export default headerStyles;

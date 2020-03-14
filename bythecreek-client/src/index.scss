@@ -12,3 +12,8 @@ html {
 body {
   background-color: rgb(233, 233, 233);
 }
+
+header, footer, main {
+  padding: 0.5em;
+  margin: 1em auto;
+}
