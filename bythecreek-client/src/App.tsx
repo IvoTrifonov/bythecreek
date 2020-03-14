@@ -5,10 +5,11 @@ import './index.scss';
 
 const App = (): JSX.Element => {
   return (
-    <div>
+    <React.Fragment>
       <Header></Header>
+      <main style={{height: '40em'}}></main>
       <Footer></Footer>
-    </div>
+    </React.Fragment>
   )
 }
 

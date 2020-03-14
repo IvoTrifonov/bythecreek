@@ -1,10 +1,11 @@
 import React from 'react'
-import { useSpring, animated } from 'react-spring';
+
+import { Spring } from 'react-spring/renderprops';
 
 const Animation = ({ styleProps, children }) => {
-  const props = useSpring({ ...styleProps });
-  
-  return <animated.div style={props} children={children} />
+  return <Spring {...styleProps}>
+    {props => <div style={props}>{children}</div>}
+  </Spring>
 }
 
 export default Animation;

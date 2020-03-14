@@ -1,17 +1,10 @@
 header {
   height: 5em;
-  width: 80%;
-  margin: 2em auto;
-  border: 2px solid limegreen;
-  border-radius: 1em;
-  background-color: lightcoral;
-
-  & .example-appear {
-    opacity: 0.04;
-  }
-
-  & .example-appear.example-appear-active {
-    opacity: 2;
-    transition: opacity 50s ease-in;
-  }
+  margin: 0.5em auto;
+  background-image: linear-gradient(to bottom, #008983, #007b76, #006d69, #00605c, #005350);
+  box-shadow: 1px 1px 3px 4px rgb(170, 169, 169);
+  opacity: 0.9;
+  color: #ffffff;
+  font-weight: 600;
+  letter-spacing: 1.4px;
 }

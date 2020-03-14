@@ -1,11 +1,13 @@
-import React from 'react';
-import Animation from '../animations/hoc/animation'; 
+import React from 'react'; 
 import animationStyles from '../animations/styles/footer';
+import './styles.scss';
+import { Spring } from 'react-spring/renderprops';
 
 export const Footer = () => {
-  return (
-    <Animation styleProps={animationStyles}>
-      <footer>Footer</footer>
-    </Animation>
-  )
+  return <Spring {...animationStyles}>
+    {props => 
+      <footer style={props}>
+        
+      </footer>}
+  </Spring>
 }
