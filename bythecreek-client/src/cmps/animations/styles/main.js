@@ -10,10 +10,7 @@ const mainStyles = {
   to: {
     transform: 'translateX(0)',
   },
-  config: {
-    duration: 460,
-    easing: easings.easeBackInOut
-  }
+  config: { tension: 100, friction: 15 }
 }
 
 export default mainStyles;

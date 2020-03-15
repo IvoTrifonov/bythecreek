@@ -1,17 +1,17 @@
 import React from 'react';
-import { Spring } from 'react-spring/renderprops';
+import { animated } from 'react-spring';
 import animationStyles from '../animations/styles/header';
-import './styles.scss';
+import { animation } from '../animations/hof/animation';
+import { MainNavigation } from './MainNavigation';
 
+import './styles.scss';
 
 export const Header = (): JSX.Element => {
 
-  return <Spring {...animationStyles}>
-    {props =>
-      <header style={props}>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae reiciendis totam enim autem ipsa libero.</p>
-      </header>
-    }
-  </Spring>
+  return (
+    <animated.header className='site-header' style={animation(animationStyles)}>
+      <MainNavigation></MainNavigation>
+    </animated.header>
+  )
 }
 

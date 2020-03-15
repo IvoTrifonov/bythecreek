@@ -1,14 +1,11 @@
 import React from 'react';
-import { Spring } from 'react-spring/renderprops';
+import { animated } from 'react-spring';
 import animationStyles from '../animations/styles/main';
+import { animation } from '../animations/hof/animation';
 import './styles.scss';
 
 export const Main = () => {
-  return <Spring {...animationStyles}>
-    {props =>
-      <main style={props}>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse recusandae necessitatibus praesentium, rerum atque dicta? Sed earum veritatis eius sequi optio porro, odit deleniti praesentium?</p>
-      </main>
-    }
-  </Spring>
+  return <animated.main style={animation(animationStyles)}>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam, commodi.</p>
+  </animated.main>
 }
