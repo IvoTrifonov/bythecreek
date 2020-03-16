@@ -1,11 +1,8 @@
 import React from 'react';
-import { animated } from 'react-spring';
-import animationStyles from '../animations/styles/main';
-import { animation } from '../animations/hof/animation';
 import './styles.scss';
 
 export const Main = () => {
-  return <animated.main style={animation(animationStyles)}>
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam, commodi.</p>
-  </animated.main>
+  return <main className='site-main'>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, eos suscipit! Ut quis explicabo, eaque totam ratione repellat autem officiis veritatis, enim nam accusantium dolore eius numquam aliquid fugit ab facere, laudantium provident! Magni est odit beatae error iste. Ad voluptate nam non eaque enim velit vel laborum officiis neque.</p>
+  </main>
 }

@@ -1,5 +1,26 @@
-main {
-  min-height: 60vh;
+@keyframes slideInFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+
+  60% {
+    transform: translateX(35px);
+  }
+
+  80% {
+    transform: translateX(-15px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.site-main {
+  animation: 650ms ease-in-out 0ms 1 slideInFromLeft;
+  min-height: 75vh;
   margin-bottom: 0em;
   background-color: #DADADA;
   box-shadow: 1px 1px 3px 4px rgb(170, 169, 169);

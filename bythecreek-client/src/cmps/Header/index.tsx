@@ -1,17 +1,22 @@
-import React from 'react';
-import { animated } from 'react-spring';
-import animationStyles from '../animations/styles/header';
-import { animation } from '../animations/hof/animation';
-import { MainNavigation } from './MainNavigation';
+import React, { useState } from 'react';
+import Navbar from './Navbar';
 
 import './styles.scss';
 
 export const Header = (): JSX.Element => {
+  const [navbarOpen, setNavbarOpen] = useState(false);
+
+  const handleNavbar = () => {
+    setNavbarOpen(!navbarOpen);
+  }
 
   return (
-    <animated.header className='site-header' style={animation(animationStyles)}>
-      <MainNavigation></MainNavigation>
-    </animated.header>
+    <header>
+      <Navbar
+        navbarState={navbarOpen}
+        handleNavbar={handleNavbar}
+      />
+    </header>
   )
 }
 

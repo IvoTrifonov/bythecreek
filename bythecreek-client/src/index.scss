@@ -12,9 +12,14 @@ html {
 body {
   background-color: rgb(233, 233, 233);
   overflow-x: hidden;
+  text-rendering: optimizeLegibility;
 }
 
-header, footer, main {
+header, main {
   padding: 0.5em;
   margin: 1em auto;
+}
+
+li {
+  list-style-type: none;
 }

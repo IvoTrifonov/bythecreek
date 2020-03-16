@@ -1,13 +1,17 @@
 const path = require('path');
-const rules = [
-  {
+const rules = [{
     test: /\.tsx?$/,
     exclude: /node_modules/,
     loader: 'babel-loader'
   },
   {
-    test:/\.s?css$/,
-    use:['style-loader','css-loader', 'sass-loader']
+    test: /\.js$/,
+    exclude: /node_modules/,
+    loader: 'babel-loader'
+  },
+  {
+    test: /\.s?css$/,
+    use: ['style-loader', 'css-loader', 'sass-loader']
   },
   {
     test: /\.(png|j?g|svg|gif)?$/,
@@ -23,7 +27,9 @@ module.exports = {
     path: path.resolve(__dirname, 'build'),
     filename: 'bundle.js'
   },
-  module: { rules },
+  module: {
+    rules
+  },
   resolve: {
     extensions: ['.ts', '.tsx', '.js']
   },
