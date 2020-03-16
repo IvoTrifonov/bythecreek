@@ -1,6 +1,7 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import { CollapseWrapper, NavLinks } from './styles';
-import { useSpring, animated } from 'react-spring';
+import { useSpring } from 'react-spring';
 
 const CollapseMenu = (props) => {
   const { open } = useSpring({ open: props.navbarState ? 0 : 1 });
@@ -15,10 +16,11 @@ const CollapseMenu = (props) => {
       }}
       >
         <NavLinks>
-          <li><a href="/" onClick={props.handleNavbar}>link n1</a></li>
-          <li><a href="/" onClick={props.handleNavbar}>link n2</a></li>
-          <li><a href="/" onClick={props.handleNavbar}>link n3</a></li>
-          <li><a href="/" onClick={props.handleNavbar}>link n4</a></li>
+          <li><NavLink exact to="/home" onClick={props.handleNavbar}>Home</NavLink></li>
+          <li><a href="/" onClick={props.handleNavbar}>News Feed</a></li>
+          <li><a href="/" onClick={props.handleNavbar}>Forum</a></li>
+          <li><a href="/" onClick={props.handleNavbar}>Products</a></li>
+          <li><a href="/" onClick={props.handleNavbar}>Login</a></li>
         </NavLinks>
       </CollapseWrapper>
     );

@@ -1,9 +1,9 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom';
 import { useSpring, config } from "react-spring";
 import { NavBar, FlexContainer, NavLinks, BurgerWrapper } from './styles';
 import BurgerMenu from "../BurgerMenu";
 import CollapseMenu from "../CollapseMenu";
-
 
 const Navbar = (props) => {
   const barAnimation = useSpring({
@@ -22,12 +22,12 @@ const Navbar = (props) => {
     <React.Fragment>
       <NavBar style={barAnimation}>
         <FlexContainer>
-          {/* <Brand /> */}
           <NavLinks style={linkAnimation}>
-            <a href="/">Home</a>
-            <a href="/">News</a>
-            <a href="/">Forum</a>
-            <a href="/">Products</a>
+            <NavLink activeClassName='active' exact to='/'>Home</NavLink>
+            <NavLink activeClassName='active' to="/newsfeed">News Feed</NavLink>
+            <NavLink activeClassName='active' to="/forum">Forum</NavLink>
+            <NavLink activeClassName='active' to="/products">Products</NavLink>
+            <NavLink activeClassName='active' to="/login">Login</NavLink>
           </NavLinks>
           <BurgerWrapper>
             <BurgerMenu

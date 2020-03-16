@@ -8,6 +8,7 @@ const Wrapper = styled.div`
 
   & span {
     background: #fff;
+    text-align: center;
     display: block;
     position: relative;
     width: 3.5rem;

@@ -12,13 +12,15 @@ const CollapseWrapper = styled(animated.div)
 
 const NavLinks = styled.ul `
   list-style-type: none;
-  padding: 2rem 1rem 2rem 2rem;
+  padding: 1em 4em;
 
   & li {
-    transition: all 300ms linear 0s;
+    text-align: center;
+    border-bottom: 2px solid lightgray;
   }
 
   & a {
+    transition: color 300ms linear 0s;
     font-size: 1.4rem;
     line-height: 2;
     color: #dfe6e9;
@@ -28,7 +30,6 @@ const NavLinks = styled.ul `
 
     &:hover {
       color: #fdcb6e;
-      border-bottom: 1px solid #fdcb6e;
     }
   }
 `;

@@ -8,7 +8,7 @@ const NavBar = styled(animated.nav)
   top: 0;
   left: 0;
   letter-spacing: 1.5px;
-  box-shadow: 1px 1px 1px 4px rgb(170, 169, 169);
+  box-shadow: 1px 1px 3px 4px rgb(170, 169, 169);
   background-image: linear-gradient(to bottom, #008983, #007b76, #006d69, #00605c, #005350);
   font-size: 1.4rem;
 `;
@@ -28,11 +28,17 @@ const NavLinks = styled(animated.ul)
   list-style-type: none;
   margin: auto 0;
   
+  & .active {
+    border-right: 1.5px solid #fdcb6e;
+    border-left: 1.5px solid #fdcb6e;
+  }
+
   & a {
+    padding: 0 0.4em;
     color: #dfe6e9;
     text-transform: uppercase;
     font-weight: 600;
-    border-bottom: 1px solid transparent;
+    border: 1.5px solid transparent;
     margin: 0 1.5rem;
     transition: all 300ms linear 0s;
     text-decoration: none;
@@ -40,7 +46,8 @@ const NavLinks = styled(animated.ul)
 
     &:hover {
       color: #fdcb6e;
-      border-bottom: 1px solid #fdcb6e;
+      border-right: 1.5px solid #fdcb6e;
+      border-left: 1.5px solid #fdcb6e;
     }
 
     @media (max-width: 768px) {
