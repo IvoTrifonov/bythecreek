@@ -4,7 +4,7 @@ import { Home } from './Home';
 import render from '../../helpers/render';
 import './styles.scss';
 
-export const Main = () => {
+export const Main = () : JSX.Element => {
   return <main className='site-main'>
     <Switch>
       <Route exact path='/' render={render(Home)}/>

@@ -34,12 +34,12 @@ const NavLinks = styled(animated.ul)
   }
 
   & a {
-    padding: 0 0.4em;
+    padding: 0 0.4rem;
     color: #dfe6e9;
     text-transform: uppercase;
     font-weight: 600;
     border: 1.5px solid transparent;
-    margin: 0 1.5rem;
+    margin: 0 0.8rem;
     transition: all 300ms linear 0s;
     text-decoration: none;
     cursor: pointer;
@@ -50,7 +50,7 @@ const NavLinks = styled(animated.ul)
       border-left: 1.5px solid #fdcb6e;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 580px) {
       display: none;
     }
   }
@@ -59,7 +59,7 @@ const NavLinks = styled(animated.ul)
 const BurgerWrapper = styled.div `
   margin: auto 0;
 
-  @media (min-width: 769px) {
+  @media (min-width: 581px) {
     display: none;
   }
 `;

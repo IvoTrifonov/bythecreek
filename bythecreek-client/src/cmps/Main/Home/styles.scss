@@ -1,0 +1,26 @@
+@keyframes slideInFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+
+  60% {
+    transform: translateX(35px);
+  }
+
+  80% {
+    transform: translateX(-15px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.content-wrapper {
+  animation: 650ms ease-in-out 0ms 1 slideInFromLeft;
+  box-shadow: 1px 1px 3px 4px rgb(170, 169, 169);
+  background-color: #DADADA;
+  padding: 0.8em;
+}
