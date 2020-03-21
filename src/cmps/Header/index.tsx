@@ -17,6 +17,6 @@ export const Header = (): JSX.Element => {
         handleNavbar={handleNavbar}
       />
     </header>
-  )
+  );
 }
 
