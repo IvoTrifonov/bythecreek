@@ -7,6 +7,7 @@ const CollapseWrapper = styled(animated.div)
   position: fixed;
   top: 4.5rem;
   left: 0;
+  z-index: 1000;
   right: 0;
 `;
 

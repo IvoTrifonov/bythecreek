@@ -44,7 +44,7 @@ const Slider = ({ slides }): JSX.Element => {
   return (
     <SliderStyles>  
       <SliderContent
-        translate={translate}
+        translate={activeSlide !== 0 ? translate : undefined}
         transition={transition}
         width={width * slides.length}>
         {slides.map((slide, i) => (
