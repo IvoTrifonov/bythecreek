@@ -1,7 +1,6 @@
 import React from 'react'
 import ArrowStyles from './ArrowStyles';
 
-
 const Arrow = ({ direction, handleClick }) => {
   
   return (

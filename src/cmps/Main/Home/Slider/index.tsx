@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import SliderStyles from './SliderStyles';
 import SliderContent from './SliderContent';
 import Slide from './Slide';
@@ -26,34 +26,18 @@ const Slider = ({ slides }): JSX.Element => {
   const { activeSlide, translate, transition } = state;
 
   const nextSlide = () => {
-    if(activeSlide === slides.length - 1) {
-      return setState({
-        ...state,
-        translate: 0,
-        activeSlide: 0
-      });
-    }
-
     setState({
       ...state,
-      translate: (activeSlide + 1) * width,
-      activeSlide: activeSlide + 1,
+      translate: activeSlide === slides.length - 1 ? 0 : (activeSlide + 1) * width,
+      activeSlide: activeSlide === slides.length - 1 ? 0 : activeSlide + 1,
     });
   };
 
   const prevSlide = () => {
-    if(activeSlide === 0) {
-      return setState({
-        ...state,
-        translate: (slides.length - 1) * width,
-        activeSlide: activeSlide === 0 ? slides.length - 1 : activeSlide - 1
-      })
-    }
-
     setState({
       ...state,
-      activeSlide: activeSlide - 1,
-      translate: (activeSlide - 1) * width
+      activeSlide: activeSlide === 0 ? slides.length - 1 : activeSlide - 1,
+      translate: activeSlide === 0 ? (slides.length - 1) * width : (activeSlide - 1) * width
     });
   }
 

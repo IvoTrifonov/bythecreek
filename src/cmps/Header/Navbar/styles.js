@@ -11,6 +11,7 @@ const NavBar = styled(animated.nav)
   box-shadow: 1px 1px 3px 4px rgb(170, 169, 169);
   background-image: linear-gradient(to bottom, #008983, #007b76, #006d69, #00605c, #005350);
   font-size: 1.4rem;
+  z-index: 1;
 `;
 
 const FlexContainer = styled.div `
