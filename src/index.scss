@@ -5,18 +5,26 @@ html {
   font-family: 'Baloo Bhai 2', cursive, sans-serif;
 }
 
-*, *:before, *::after {
+*,
+*:before,
+*::after {
   margin: 0;
   padding: 0;
 }
+
 body {
   background-color: rgb(233, 233, 233);
   overflow-x: hidden;
   text-rendering: optimizeLegibility;
 }
 
-header, main {
+header,
+main {
   margin: 2em auto;
+}
+
+main {
+  min-height: 75vh;
 }
 
 li {

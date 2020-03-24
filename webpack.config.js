@@ -27,7 +27,8 @@ module.exports = {
   entry: './src/index.tsx',
   output: {
     path: path.resolve(__dirname, 'build'),
-    filename: 'bundle.js'
+    filename: 'bundle.js',
+    publicPath: '/'
   },
   module: {
     rules
@@ -42,6 +43,7 @@ module.exports = {
   ],
   devServer: {
     contentBase: './',
+    historyApiFallback: true, 
     port: 5000,
   }
 }

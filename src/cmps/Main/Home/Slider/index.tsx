@@ -9,12 +9,14 @@ const Slider = ({ slides }): JSX.Element => {
 
   useEffect(() => {
     const handleResize = () => {
-      setWidth(window.innerWidth);
+      if(Math.abs(window.innerWidth - width) > 45) {
+        return setWidth(window.innerWidth);
+      }
     }
 
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
-  }, []);
+  }, [width]);
 
   const [state, setState] = useState({
     activeSlide: 0,

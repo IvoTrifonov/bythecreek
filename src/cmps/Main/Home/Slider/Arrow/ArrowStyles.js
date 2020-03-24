@@ -5,10 +5,12 @@ const ArrowStyles = styled.div `
   position: absolute;
   top: 50%;
   ${props => props.direction === 'right' ? `right: 25px` : `left: 25px`};
-  height: 50px;
-  width: 50px;
+  filter: drop-shadow(0 0 0.2em black);
+  height: 3.2rem;
+  width: 3.2rem;
+  user-select: none;
   justify-content: center;
-  background: white;
+  background: #e6e6e6;
   border-radius: 50%;
   cursor: pointer;
   align-items: center;
@@ -17,6 +19,8 @@ const ArrowStyles = styled.div `
     transform: scale(1.1);
   }
   span {
+    font-size: 2em;
+    color: #5d5d5d;
     transform: translateX(${props => props.direction === 'left' ? '-2' : '2'}px);
     &:focus {
       outline: 0;

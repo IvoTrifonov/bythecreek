@@ -6,6 +6,7 @@ const SliderStyles = styled.div`
   width: 100%;
   margin: 0 auto;
   overflow: hidden;
+  border-radius: 0.5em;
 `;
 
 export default SliderStyles;

@@ -14,7 +14,7 @@ const NavBar = styled(animated.nav)
   z-index: 1;
 `;
 
-const FlexContainer = styled.div `
+const FlexContainer = styled.div`
   max-width: 120rem;
   display: flex;
   margin: auto;
@@ -44,6 +44,7 @@ const NavLinks = styled(animated.ul)
     transition: all 300ms linear 0s;
     text-decoration: none;
     cursor: pointer;
+    border-radius: 0.3em;
 
     &:hover {
       color: #fdcb6e;
@@ -57,7 +58,7 @@ const NavLinks = styled(animated.ul)
   }
 `;
 
-const BurgerWrapper = styled.div `
+const BurgerWrapper = styled.div`
   margin: auto 0;
 
   @media (min-width: 581px) {
