@@ -1,14 +1,9 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 
-const useLoginForm = (callback) => {
-  const [inputs, setInputs] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    password: ''
-  });
+const useLoginForm = (props, callback) => {
+  const [inputs, setInputs] = useState({ ...props });
 
-  const handleSubmit = (event): void => {
+  const handleSubmit = (event: Event): void => {
     if (event) { event.preventDefault(); }
     callback();
   };

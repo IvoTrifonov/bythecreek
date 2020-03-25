@@ -1,5 +1,6 @@
 import React from 'react';
 import Slider from './Slider';
+import ContentWrapper from '../../../commonStyles/ContentWrapper';
 
 const Home = (): JSX.Element => {
   const images = [
@@ -10,9 +11,9 @@ const Home = (): JSX.Element => {
   ]
 
   return (
-    <div className='content-wrapper'>
+    <ContentWrapper>
       <Slider slides={images}></Slider>
-    </div>
+    </ContentWrapper>
   );
 };
 

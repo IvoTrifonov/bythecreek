@@ -1,63 +1,41 @@
-import React, { useState, useRef } from 'react';
-import useLoginForm from '../../../customHooks/useLoginForm';
-import loginValidation from '../../../helpers/validateLogin';
+import React from 'react';
+import { Link } from 'react-router-dom';
+import ContentWrapper from '../../../commonStyles/ContentWrapper';
+import useForm from '../../../customHooks/useForm';
 import StyledForm from '../../../commonStyles/FormStyles';
-import { FaRegCheckCircle } from 'react-icons/fa';
+import { IoIosCloseCircle, IoIosCheckmarkCircle } from 'react-icons/io';
 
 const Login = (): JSX.Element => {
-  const { inputs, handleInputChange, handleSubmit } = useLoginForm(login);
- 
-  const spanRefs = {
-    firstName: useRef<HTMLElement>(),
-    lastName: useRef<HTMLElement>(),
-    email: useRef<HTMLElement>(),
-    password: useRef<HTMLElement>()
-  }
+  const { inputs, handleInputChange, handleSubmit } = useForm({
+    username: '',
+    password: ''
+  }, login);
 
   function login() { }
 
-  const handleOnBlur = (e) => {
-    const key = e.target.name;
-
-    if(e.target.value) {
-      spanRefs[key].current.style.display = 'block';
-    }
-  }
-
-  const handleOnFocus = (e) => {
-    spanRefs[e.target.name].current.style.display = 'none';
-  } 
-
   return (
-    <div className='content-wrapper'>
+    <ContentWrapper>
       <StyledForm inputs={inputs} onSubmit={handleSubmit}>
-        <div className='formInputBox' onBlur={handleOnBlur}>
-          <label>First Name</label>
-          <input onFocus={handleOnFocus} type="text" name="firstName" onChange={handleInputChange} value={inputs.firstName} placeholder='John' />
-          <span ref={spanRefs.firstName}><FaRegCheckCircle/></span>
-        </div>
-
         <div className='formInputBox'>
-          <label>Last Name</label>
-          <input onBlur={handleOnBlur} type="text" name="lastName" onChange={handleInputChange} value={inputs.lastName} placeholder='Doe' />
-          <span ref={spanRefs.lastName}><FaRegCheckCircle/></span>
-        </div>
-
-        <div className='formInputBox'>
-          <label>Email Address</label>
-          <input onBlur={handleOnBlur} type="email" name="email" onChange={handleInputChange} value={inputs.email} placeholder='johndoe@gmail.com' />
-          <span ref={spanRefs.email}><FaRegCheckCircle/></span>
+          <label>Username</label>
+          <input type="text" name="username" onChange={handleInputChange} value={inputs.username} placeholder='John' />
+          <span>
+            {inputs.username ? <IoIosCheckmarkCircle /> : <IoIosCloseCircle />}
+          </span>
         </div>
 
         <div className='formInputBox'>
           <label>Password</label>
-          <input onBlur={handleOnBlur} type="password" name="password" onChange={handleInputChange} value={inputs.password} placeholder='******' />
-          <span ref={spanRefs.password}><FaRegCheckCircle/></span>
+          <input type="password" name="password" onChange={handleInputChange} value={inputs.password} placeholder='******' />
+          <span>
+            {inputs.password ? <IoIosCheckmarkCircle /> : <IoIosCloseCircle />}
+          </span>
         </div>
-        <button type="submit">Log In</button>
+        <button type="submit">Sign In</button>
+        <p>Still unregistered? <Link to='/signup'>Sign Up</Link></p>
       </StyledForm>
-    </div>
-  )
+    </ContentWrapper>
+  );
 }
 
 export default Login;

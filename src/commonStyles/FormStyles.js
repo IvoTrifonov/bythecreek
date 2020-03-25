@@ -15,11 +15,11 @@ const StyledForm = styled.form`
     margin: 0 auto;
 
     & span {
-      display: none;
+      font-size: 1.2em;
       color: #2f4a56;
       position: absolute;
       right: 0.5rem;;
-      top: 2.4em;
+      top: 2em;
     }
   }
 
@@ -59,6 +59,19 @@ const StyledForm = styled.form`
     &:hover {
       background-color: #00897c;
       transform: scale(1.04);
+    }
+  }
+
+  & p {
+    padding-top: 1em;
+    font-size: 1.1em;
+    font-style: italic;
+    text-align: center;
+
+    & a {
+      margin-left: 0.5em;
+      color: inherit;
+      font-weight: bold;
     }
   }
 }

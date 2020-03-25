@@ -25,8 +25,8 @@ const Links = (props) : JSX.Element => {
         </NavLink>
       </li>
       <li>
-        <NavLink onClick={props.handleNavbar} activeClassName='active' exact to="/login">
-          Login
+        <NavLink onClick={props.handleNavbar} activeClassName='active' exact to="/signin">
+          Sign In
         </NavLink>
       </li>
     </React.Fragment>
