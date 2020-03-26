@@ -1,11 +1,15 @@
-import React from 'react'
+import React, { useRef, useState } from 'react'
 import { Link } from 'react-router-dom';
 import ContentWrapper from '../../../commonStyles/ContentWrapper';
+import Input from '../Login/Input';
 import StyledForm from '../../../commonStyles/FormStyles';
 import useForm from '../../../customHooks/useForm';
-import { IoIosCloseCircle, IoIosCheckmarkCircle } from 'react-icons/io';
 
 const Register = () => {
+  const formContentRef = useRef<HTMLDivElement>();
+  const errorMsgRef = useRef<HTMLParagraphElement>();
+  const [errorMsg, setErrorMsg] = useState('');
+
   const { inputs, handleInputChange, handleSubmit } = useForm({
     username: '',
     firstName: '',
@@ -15,51 +19,69 @@ const Register = () => {
   }, register);
 
   function register() { }
-  
+
   return (
     <ContentWrapper>
       <StyledForm inputs={inputs} onSubmit={handleSubmit}>
-        <div className='formInputBox'>
-          <label>Username</label>
-          <input type="text" name="username" onChange={handleInputChange} value={inputs.username} placeholder='John' />
-          <span>
-            {inputs.username ? <IoIosCheckmarkCircle /> : <IoIosCloseCircle />}
-          </span>
-        </div>
+        <p className='errorMsg' ref={errorMsgRef}>{errorMsg}</p>
+        <div className='formContent' ref={formContentRef}>
+          <Input
+            name='firstName'
+            type='text'
+            handleInputChange={handleInputChange}
+            inputValue={inputs.firstName}
+            placeholder='John'
+            setErrorMsg={setErrorMsg}
+            formContentRef={formContentRef}
+            errorMsgRef={errorMsgRef}
+          />
 
-        <div className='formInputBox'>
-          <label>First Name</label>
-          <input type="text" name="firstName" onChange={handleInputChange} value={inputs.firstName} placeholder='John' />
-          <span>
-            {inputs.firstName ? <IoIosCheckmarkCircle /> : <IoIosCloseCircle />}
-          </span>
-        </div>
+          <Input
+            name='lastName'
+            type='text'
+            handleInputChange={handleInputChange}
+            inputValue={inputs.lastName}
+            placeholder='Doe'
+            setErrorMsg={setErrorMsg}
+            formContentRef={formContentRef}
+            errorMsgRef={errorMsgRef}
+          />
 
-        <div className='formInputBox'>
-          <label>Last Name</label>
-          <input type="text" name="lastName" onChange={handleInputChange} value={inputs.lastName} placeholder='Doe' />
-          <span>
-            {inputs.lastName ? <IoIosCheckmarkCircle /> : <IoIosCloseCircle />}
-          </span>
-        </div>
+          <Input
+            name='username'
+            type='text'
+            handleInputChange={handleInputChange}
+            inputValue={inputs.username}
+            placeholder='jonndoe123'
+            setErrorMsg={setErrorMsg}
+            formContentRef={formContentRef}
+            errorMsgRef={errorMsgRef}
+          />
 
-        <div className='formInputBox'>
-          <label>Email Address</label>
-          <input type="email" name="email" onChange={handleInputChange} value={inputs.email} placeholder='johndoe@gmail.com' />
-          <span>
-            {inputs.email ? <IoIosCheckmarkCircle /> : <IoIosCloseCircle />}
-          </span>
-        </div>
+          <Input
+            name='email'
+            type='text'
+            handleInputChange={handleInputChange}
+            inputValue={inputs.email}
+            placeholder='jonndoe123@gmail.com'
+            setErrorMsg={setErrorMsg}
+            formContentRef={formContentRef}
+            errorMsgRef={errorMsgRef}
+          />
 
-        <div className='formInputBox'>
-          <label>Password</label>
-          <input type="password" name="password" onChange={handleInputChange} value={inputs.password} placeholder='******' />
-          <span>
-            {inputs.password ? <IoIosCheckmarkCircle /> : <IoIosCloseCircle />}
-          </span>
+          <Input
+            name='password'
+            type='password'
+            handleInputChange={handleInputChange}
+            inputValue={inputs.password}
+            placeholder='*******'
+            setErrorMsg={setErrorMsg}
+            formContentRef={formContentRef}
+            errorMsgRef={errorMsgRef}
+          />
+          <button type="submit">Sign Up</button>
+          <p className='signMsg'>Already have an account? <Link to='/signin'>Sign In</Link></p>
         </div>
-        <button type="submit">Sign Up</button>
-        <p>Already have an account? <Link to='/signin'>Sign In</Link></p>
       </StyledForm>
     </ContentWrapper>
   )

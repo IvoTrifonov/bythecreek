@@ -8,7 +8,7 @@ export const Header = (): JSX.Element => {
 
   const handleNavbar = () => {
     setNavbarOpen(!navbarOpen);
-  }
+  };
 
   return (
     <header>

@@ -8,14 +8,14 @@ import { animation } from '../../animations/hof/animation';
 import barAnimationStyles from '../../animations/styles/barAnimation';
 import linkAnimationStyles from '../../animations/styles/linkAnimation';
 
-const Navbar = ({ navbarState, handleNavbar }) : JSX.Element => {
-  
+const Navbar = ({ navbarState, handleNavbar }): JSX.Element => {
+
   return (
     <React.Fragment>
       <NavBar style={animation(barAnimationStyles)}>
         <FlexContainer>
           <NavLinks style={animation(linkAnimationStyles)}>
-            <Links/>
+            <Links />
           </NavLinks>
           <BurgerWrapper>
             <BurgerMenu

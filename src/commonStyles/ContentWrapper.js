@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 const direction = Math.round(Math.random()); 
-// generates 0 or 1 (left or right), the idea is to make the content wrapper slide left or right
 
 const ContentWrapper = styled.div`
 @keyframes slideAnimation {

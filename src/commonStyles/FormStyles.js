@@ -2,29 +2,39 @@ import styled from 'styled-components';
 
 const StyledForm = styled.form`
 & {
+  position: relative;
   margin: 0 auto;
   max-width: 23em;
   border: 1px solid #00897c;
   padding: 1.5em 1em;
   
+  & .formContent {
+    transition: filter 0.2s ease-in;
+    
+    &.blur {
+      filter: blur(23px);
+    }
+  }
+
   & .formInputBox {
     position: relative;
     display: flex;
     flex-direction: column;
     max-width: 20rem;
-    margin: 0 auto;
+    margin: 1em auto;
 
     & span {
-      font-size: 1.2em;
+      font-size: 1.5em;
       color: #2f4a56;
       position: absolute;
       right: 0.5rem;;
-      top: 2em;
+      top: 1.45em;
+      cursor: pointer;
     }
   }
 
   &, & input, button[type=submit] {
-    border-radius: 0.2em;
+    border-radius: 0.3em;
   }
 
   & label {
@@ -48,7 +58,7 @@ const StyledForm = styled.form`
     cursor: pointer;
     width: 8rem;
     padding: 0.3em 0;
-    margin: 1rem auto;
+    margin: 2rem auto;
     background: #2f4a56;
     outline: none;
     border: 0;
@@ -62,8 +72,11 @@ const StyledForm = styled.form`
     }
   }
 
-  & p {
-    padding-top: 1em;
+  & .signMsg {
+    border-top: 0.5px solid gray;
+    max-width: 20rem;
+    padding: 0.5em;
+    margin: 2em auto 0 auto;
     font-size: 1.1em;
     font-style: italic;
     text-align: center;
@@ -72,6 +85,23 @@ const StyledForm = styled.form`
       margin-left: 0.5em;
       color: inherit;
       font-weight: bold;
+    }
+  }
+
+  & .errorMsg {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0 ease-in, opacity 0 ease-in;
+    transition-delay: 0.18s;
+    color: #2f4a56;
+    font-size: 2em;
+    position: absolute;
+    top: 20%;
+    text-align: center;
+
+    &.delay {
+      visibility: visible;
+      opacity: 1;
     }
   }
 }
