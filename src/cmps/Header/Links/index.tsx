@@ -5,11 +5,6 @@ const Links = (props) : JSX.Element => {
   return (
     <React.Fragment>
       <li>
-        <NavLink onClick={props.handleNavbar} activeClassName='active' exact to='/'>
-          Home
-        </NavLink>
-      </li>
-      <li>
         <NavLink onClick={props.handleNavbar} activeClassName='active' exact to="/newsfeed">
           News Feed
         </NavLink>

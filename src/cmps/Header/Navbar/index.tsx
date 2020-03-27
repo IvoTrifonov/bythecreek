@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import BurgerMenu from "../BurgerMenu";
 import CollapseMenu from "../CollapseMenu";
 import Links from '../Links';
@@ -14,6 +15,9 @@ const Navbar = ({ navbarState, handleNavbar }): JSX.Element => {
     <React.Fragment>
       <NavBar style={animation(barAnimationStyles)}>
         <FlexContainer>
+        <Link to='/'>
+          <img className='site-logo' src='../../../../public/logo final whiter.png'></img>
+        </Link>
           <NavLinks style={animation(linkAnimationStyles)}>
             <Links />
           </NavLinks>

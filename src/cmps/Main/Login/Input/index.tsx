@@ -2,18 +2,18 @@ import React from 'react';
 import { RedIoIosCloseCircle, GreenIoIosCheckmarkCircle } from '../../../../helpers/HOC/validateIconsAuth';
 
 const Input = ({ name, type, handleInputChange, inputValue, placeholder, setErrorMsg, formContentRef, errorMsgRef }) => {
-  
+
   const getLabelName = (name: string) => {
     name = name.charAt(0).toUpperCase() + name.slice(1);
-    
-    if(name.startsWith('First') || name.startsWith('Last')) {
+
+    if (name.startsWith('First') || name.startsWith('Last')) {
       const index = name.indexOf('t');
       return name.slice(0, index + 1) + ' ' + name.slice(index + 1);
-    } 
+    }
 
     return name;
   }
-  
+
   const handleBlur = (propName) => {
     if (!inputValue) {
       formContentRef.current.classList.add('blur');
@@ -38,10 +38,7 @@ const Input = ({ name, type, handleInputChange, inputValue, placeholder, setErro
         value={inputValue}
         placeholder={placeholder}
       />
-      <span
-        onMouseOver={() => handleBlur(name)}
-        onMouseLeave={removeBlur}
-      >
+      <span onMouseOver={() => handleBlur(name)} onMouseLeave={removeBlur}>
         {inputValue ? <GreenIoIosCheckmarkCircle /> : <RedIoIosCloseCircle />}
       </span>
     </div>

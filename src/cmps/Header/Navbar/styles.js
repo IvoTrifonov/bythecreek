@@ -15,12 +15,20 @@ const NavBar = styled(animated.nav)
 `;
 
 const FlexContainer = styled.div`
+  border: 1px solid black;
   max-width: 120rem;
   display: flex;
-  margin: auto;
-  padding: 0 2rem;;
-  justify-content: space-between;
+  padding: 0.2em 2rem;
   height: 5rem;
+
+  & .site-logo {
+    margin-right: 2em;
+    height: 100%;
+  }
+
+  @media (max-width: 581px) {
+    justify-content: space-between;
+  }
 `;
 
 const NavLinks = styled(animated.ul)
@@ -32,6 +40,7 @@ const NavLinks = styled(animated.ul)
   & .active {
     border-right: 1.5px solid #fdcb6e;
     border-left: 1.5px solid #fdcb6e;
+    color: #fdcb6e; 
   }
 
   & a {
@@ -40,6 +49,7 @@ const NavLinks = styled(animated.ul)
     text-transform: uppercase;
     font-weight: 600;
     border: 1.5px solid transparent;
+    white-space: nowrap;
     margin: 0 0.8rem;
     transition: all 300ms linear 0s;
     text-decoration: none;

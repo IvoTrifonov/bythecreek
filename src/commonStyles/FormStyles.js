@@ -5,14 +5,20 @@ const StyledForm = styled.form`
   position: relative;
   margin: 0 auto;
   max-width: 23em;
-  border: 1px solid #00897c;
   padding: 1.5em 1em;
+  background: #e9e9e9;
+  box-shadow: 1px 1px 2px 2px rgb(51,95,108, 0.1);
+  transition: box-shadow 0.2s ease-in;
+
+  &:hover {
+    box-shadow: 1px 1px 3px 4px rgb(51,95,108, 0.3);
+  }
   
   & .formContent {
     transition: filter 0.2s ease-in;
     
     &.blur {
-      filter: blur(23px);
+      filter: blur(15px);
     }
   }
 
@@ -93,7 +99,7 @@ const StyledForm = styled.form`
     opacity: 0;
     transition: visibility 0 ease-in, opacity 0 ease-in;
     transition-delay: 0.18s;
-    color: #2f4a56;
+    color: #203b44;
     font-size: 2em;
     position: absolute;
     top: 20%;

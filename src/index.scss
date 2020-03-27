@@ -31,6 +31,14 @@ li {
   list-style-type: none;
 }
 
+button::-moz-focus-inner{
+  border: 0;
+} 
+
+a {
+  outline: none;
+}
+
 @media only screen and (max-width: 920px) {
   html {
     font-size: 15px;
