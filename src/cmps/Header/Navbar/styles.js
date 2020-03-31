@@ -20,14 +20,11 @@ const FlexContainer = styled.div`
   display: flex;
   padding: 0.2em 2rem;
   height: 5rem;
-
+  justify-content: space-between;
+  
   & .site-logo {
     margin-right: 2em;
     height: 100%;
-  }
-
-  @media (max-width: 581px) {
-    justify-content: space-between;
   }
 `;
 

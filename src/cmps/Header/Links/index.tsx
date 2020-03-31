@@ -1,26 +1,32 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-const Links = (props) : JSX.Element => {
+const Links = (): JSX.Element => {
+ 
   return (
     <React.Fragment>
       <li>
-        <NavLink onClick={props.handleNavbar} activeClassName='active' exact to="/newsfeed">
+        <NavLink activeClassName='active' exact to="/">
+          Home
+        </NavLink>
+      </li>
+      <li>
+        <NavLink activeClassName='active' exact to="/newsfeed">
           News Feed
         </NavLink>
       </li>
       <li>
-        <NavLink onClick={props.handleNavbar} activeClassName='active' exact to="/forum">
+        <NavLink activeClassName='active' exact to="/forum">
           Forum
         </NavLink>
       </li>
       <li>
-        <NavLink onClick={props.handleNavbar} activeClassName='active' exact to="/products">
+        <NavLink activeClassName='active' exact to="/products">
           Products
         </NavLink>
       </li>
       <li>
-        <NavLink onClick={props.handleNavbar} activeClassName='active' exact to="/signin">
+        <NavLink activeClassName='active' exact to="/signin">
           Sign In
         </NavLink>
       </li>

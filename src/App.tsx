@@ -6,6 +6,7 @@ import { Main } from './cmps/Main';
 import './index.scss';
 
 const App = (): JSX.Element => {
+
   return (
     <React.Fragment>
       <Router>

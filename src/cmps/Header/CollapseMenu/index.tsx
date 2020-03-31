@@ -1,5 +1,5 @@
 import React from 'react';
-import Links from '../Links';
+import CollapseLinks from '../CollapseLinks';
 import { CollapseWrapper, NavLinks } from './styles';
 import { useSpring } from 'react-spring';
 
@@ -14,11 +14,12 @@ const CollapseMenu = ({ navbarState, handleNavbar }): JSX.Element => {
       }).interpolate(openValue => `translate3d(0, ${openValue}px, 0`),
     }}
     >
-      <NavLinks>
-        <Links handleNavbar={handleNavbar} />
+      <NavLinks className='navlinks'>
+        <CollapseLinks handleNavbar={handleNavbar} />
       </NavLinks>
     </CollapseWrapper>
   );
+  
 };
 
 export default CollapseMenu;
