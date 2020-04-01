@@ -1,3 +1,4 @@
+import logoUrl from  '../../../../public/siteLogo.png';
 import styled from 'styled-components';
 import { animated } from 'react-spring';
 
@@ -15,16 +16,16 @@ const NavBar = styled(animated.nav)
 `;
 
 const FlexContainer = styled.div`
-  border: 1px solid black;
-  max-width: 120rem;
   display: flex;
   padding: 0.2em 2rem;
   height: 5rem;
   justify-content: space-between;
   
-  & .site-logo {
-    margin-right: 2em;
+  & .logo-box {
+    background: url('${logoUrl}') no-repeat center;
+    background-size: contain;
     height: 100%;
+    width: 4em;
   }
 `;
 

@@ -5,7 +5,7 @@ const CollapseWrapper = styled(animated.div)
 `
   background: #404a4d;
   position: fixed;
-  top: 5.7em;
+  top: 5.5em;
   left: 0;
   z-index: 1000;
   right: 0;
@@ -21,6 +21,8 @@ const NavLinks = styled.ul `
   }
 
   & a {
+    display: inline-block;
+    width: 100%;
     transition: color 300ms linear 0s;
     font-size: 1.4rem;
     line-height: 2;
