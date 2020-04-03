@@ -1,10 +1,12 @@
 import React from 'react'
 import styled from 'styled-components';
-const logoUrl = require('../../../../public/site-logo.png');
+import logoUrl from '../../../../public/site-logo.png';
 import { Link } from 'react-router-dom';
 
+console.log(logoUrl)
+
 const LogoStyle = styled.div`
-  background: url(${logoUrl.default}) no-repeat center;
+  background: url(${logoUrl}) no-repeat center;
   background-size: contain;
   height: 3.6rem;
   width: 15rem;
