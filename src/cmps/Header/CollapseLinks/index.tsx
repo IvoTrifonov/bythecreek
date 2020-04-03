@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 
 const CollaseLinks = ({ handleNavbar }): JSX.Element => {
-
+  
   useEffect(() => {
     const handleNavLinks = (event) => {
       if (!event.target.classList.contains('navlinks')) {

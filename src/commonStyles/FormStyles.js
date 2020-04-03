@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 const StyledForm = styled.form`
-& {
   position: relative;
   margin: 0 auto;
   max-width: 23em;

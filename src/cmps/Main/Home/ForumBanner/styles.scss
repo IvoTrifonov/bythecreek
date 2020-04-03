@@ -1,0 +1,48 @@
+.forumBanner-wrapper {
+  position: relative;
+
+  div {
+    font-size: 2rem;
+    letter-spacing: 0.5px;
+    text-align: center;
+    position: absolute;
+    top: 33%;
+    left: 10%;
+
+    @media (max-width: 602px) {
+      top: 25%;
+      font-size: 1.4rem;
+    }
+
+    p { 
+      margin: 0.3em; 
+      white-space: nowrap;
+    }
+
+    & p:first-child{
+      color: #352a29;
+    }
+
+    & p:nth-child(2) {
+      color: #ffffff;
+    }
+
+    & p:last-child {
+      background-image: linear-gradient(to right, #eaae8c, #e5ba93, #e1c69e, #ddd0ac, #dcdabc);
+      border-radius: 5em;
+      padding: 0.2em;
+      color: #352a29;
+      font-weight: bold;
+      margin: 0 auto;
+      width: 9rem;
+      margin-top: 1.7rem;
+    }
+  }
+
+  & img {
+    vertical-align: middle;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+}

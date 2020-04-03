@@ -3,8 +3,8 @@ import styled from 'styled-components';
 const SliderStyles = styled.div`
   position: relative;
   height: 60vh;
-  width: 100%;
-  margin: 0 auto;
+  width: 98%;
+  margin: 1em auto;
   overflow: hidden;
   border-radius: 0.5em;
 `;

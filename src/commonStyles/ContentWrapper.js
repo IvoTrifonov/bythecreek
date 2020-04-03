@@ -1,19 +1,18 @@
 import styled from 'styled-components';
-const direction = Math.round(Math.random()); 
 
 const ContentWrapper = styled.div`
 @keyframes slideAnimation {
   0% {
     opacity: 0;
-    transform: translateX(${direction && '-'}100%);
+    transform: translateX(-100%);
   }
   
   60% {
-    transform: translateX(${!direction && '-'}35px);
+    transform: translateX(35px);
   }
   
   80% {
-    transform: translateX(${direction && '-'}15px);
+    transform: translateX(-15px);
   }
   
   100% {
@@ -26,7 +25,7 @@ const ContentWrapper = styled.div`
   animation: 650ms ease-in-out 0ms 1 slideAnimation;
   box-shadow: 1px 1px 3px 3px rgb(170, 169, 169);
   background-color: #DADADA;
-  padding: 0.8em;
+  padding: 1em 0;
 } 
 `;
 
