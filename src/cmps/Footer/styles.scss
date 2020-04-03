@@ -1,8 +1,44 @@
 footer {
-  height: 9em;
+  background-color: #fae7d5;
+  padding: 0.5em 3em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
   margin-top: 1em;
-  background-image: linear-gradient(to top, #222222, #272c34, #223844, #10464f, #005350);
-  box-shadow: 3px 3px 5px 6px rgb(71, 71, 71);
+  box-shadow: 1px 1px 3px 4px rgb(170, 169, 169);
   opacity: 0.9;
 
+  & .logo-links-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0.5rem 0;
+  }
+
+  & ul {
+    display: flex;
+    flex-direction: row;
+
+    & li {
+      margin: 1em;
+
+      & a {
+        font-size: 1.2rem;
+        white-space: nowrap
+      }
+    }
+
+    @media (max-width: 750px) {
+      flex-direction: column;
+      & li { margin: 0.3rem; }
+    }
+  }
+
+  & p {
+    color: #352a29;
+    width: 100%;
+    text-align: center;
+  }
 }

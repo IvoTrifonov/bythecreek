@@ -1,25 +1,26 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { Fragment } from 'react';
+import Logo from '../Logo';
 import BurgerMenu from "../BurgerMenu";
 import CollapseMenu from "../CollapseMenu";
+import Search from '../Search';
 import Links from '../Links';
 import { NavBar, FlexContainer, NavLinks, BurgerWrapper } from './styles';
 import { animation } from '../../animations/hof/animation';
 
+
 import barAnimationStyles from '../../animations/styles/barAnimation';
-import linkAnimationStyles from '../../animations/styles/linkAnimation';
+import headerElementsAnimation from '../../animations/styles/headerElementsAnimation';
 
 const Navbar = ({ navbarState, handleNavbar }): JSX.Element => {
 
   return (
-    <React.Fragment>
+    <Fragment>
       <NavBar style={animation(barAnimationStyles)}>
-        <FlexContainer>
-          <Link to='/'>
-            <div className='logo-box'/>
-          </Link>
-          <NavLinks style={animation(linkAnimationStyles)}>
+        <FlexContainer style={animation(headerElementsAnimation)}>
+          <Logo />
+          <NavLinks>
             <Links />
+            <Search />
           </NavLinks>
           <BurgerWrapper>
             <BurgerMenu
@@ -29,11 +30,12 @@ const Navbar = ({ navbarState, handleNavbar }): JSX.Element => {
           </BurgerWrapper>
         </FlexContainer>
       </NavBar>
+
       <CollapseMenu
         navbarState={navbarState}
         handleNavbar={handleNavbar}
       />
-    </React.Fragment>
+    </Fragment>
   )
 }
 

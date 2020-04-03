@@ -24,7 +24,7 @@ const ContentWrapper = styled.div`
 
 & {
   animation: 650ms ease-in-out 0ms 1 slideAnimation;
-  box-shadow: 1px 1px 3px 4px rgb(170, 169, 169);
+  box-shadow: 1px 1px 3px 3px rgb(170, 169, 169);
   background-color: #DADADA;
   padding: 0.8em;
 } 

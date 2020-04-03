@@ -1,19 +1,19 @@
 import styled from 'styled-components';
 
-const Wrapper = styled.div`
+const Wrapper = styled.div` 
   position: relative;
-  padding-top: .7rem;
+  padding-top: .4em;
   cursor: pointer;
   display: block;
 
   & span {
-    background: #fff;
+    background: #352a29;
     text-align: center;
     display: block;
     position: relative;
-    width: 3.5rem;
+    width: 3.2rem;
     height: .4rem;
-    margin-bottom: .7rem;
+    margin-bottom: .6rem;
     transition: all ease-in-out 0.2s;
   }
 

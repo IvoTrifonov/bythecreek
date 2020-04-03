@@ -12,8 +12,8 @@ const App = (): JSX.Element => {
       <Router>
         <Header></Header>
         <Main></Main>
+        <Footer></Footer>
       </Router>
-      <Footer></Footer>
     </React.Fragment>
   )
 }

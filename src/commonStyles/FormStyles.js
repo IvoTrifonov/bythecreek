@@ -34,7 +34,7 @@ const StyledForm = styled.form`
       color: #2f4a56;
       position: absolute;
       right: 0.5rem;;
-      top: 1.45em;
+      top: 1.15em;
       cursor: pointer;
     }
   }

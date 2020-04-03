@@ -1,66 +1,52 @@
-import logoUrl from  '../../../../public/siteLogo.png';
 import styled from 'styled-components';
 import { animated } from 'react-spring';
 
 const NavBar = styled(animated.nav)
-`
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  letter-spacing: 1.5px;
-  box-shadow: 1px 1px 3px 4px rgb(170, 169, 169);
-  background-image: linear-gradient(to bottom, #008983, #007b76, #006d69, #00605c, #005350);
-  font-size: 1.4rem;
-  z-index: 1;
+`   
+  background-color: #fae7d5;
+  letter-spacing: 0.7px;
+  box-shadow: 1px 1px 2px 2px rgb(170, 169, 169);
+  font-size: 1.1rem;
 `;
 
-const FlexContainer = styled.div`
+const FlexContainer = styled(animated.div)`
   display: flex;
-  padding: 0.2em 2rem;
-  height: 5rem;
+  padding: 0.2em 1rem;
+  height: 3.5rem;
   justify-content: space-between;
-  
-  & .logo-box {
-    background: url('${logoUrl}') no-repeat center;
-    background-size: contain;
-    height: 100%;
-    width: 4em;
-  }
+  align-items: center;
 `;
 
 const NavLinks = styled(animated.ul)
 `
-  justify-self: end;
-  margin: auto 0;
+  margin: 0 0.7rem;
   display: flex;
+  align-items: center;
   
   & .active {
-    border-right: 1.5px solid #fdcb6e;
-    border-left: 1.5px solid #fdcb6e;
-    color: #fdcb6e; 
+    background-size: 100% 2px, auto;
+    text-shadow: 0px 3px 13px rgba(150, 150, 150, 1);
   }
 
-  & a {
-    padding: 0 0.4rem;
-    color: #dfe6e9;
+  & li a {
+    padding: 0.5rem 0.1rem;
     text-transform: uppercase;
     font-weight: 600;
-    border: 1.5px solid transparent;
     white-space: nowrap;
     margin: 0 0.8rem;
-    transition: all 300ms linear 0s;
-    text-decoration: none;
     cursor: pointer;
-    border-radius: 0.3em;
+    background-image: linear-gradient(#000000, #000000);
+    background-size: 0 2px, auto;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    transition: all .2s ease-out;
 
     &:hover {
-      color: #fdcb6e;
-      border-right: 1.5px solid #fdcb6e;
-      border-left: 1.5px solid #fdcb6e;
+      background-size: 100% 2px, auto;
+      text-shadow: 0px 5px 13px rgba(150, 150, 150, 1);
     }
 
-    @media (max-width: 580px) {
+    @media (max-width: 750px) {
       display: none;
     }
   }
@@ -69,7 +55,7 @@ const NavLinks = styled(animated.ul)
 const BurgerWrapper = styled.div`
   margin: auto 0;
 
-  @media (min-width: 581px) {
+  @media (min-width: 750px) {
     display: none;
   }
 `;

@@ -5,7 +5,7 @@ const CollapseWrapper = styled(animated.div)
 `
   background: #404a4d;
   position: fixed;
-  top: 5.5em;
+  top: 4em;
   left: 0;
   z-index: 1000;
   right: 0;
