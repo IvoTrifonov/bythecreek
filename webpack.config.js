@@ -3,28 +3,28 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const rules = [{
-  test: /\.tsx?$/,
-  exclude: /node_modules/,
-  loader: 'babel-loader'
-},
-{
-  test: /\.js$/,
-  exclude: /node_modules/,
-  loader: 'babel-loader'
-},
-{
-  test: /\.ts$/,
-  exclude: /node_modules/,
-  loader: 'babel-loader'
-},
-{
-  test: /\.s?css$/,
-  use: ['style-loader', 'css-loader', 'sass-loader']
-},
-{
-  test: /\.(png|j?g|svg|gif)?$/,
-  use: ['url-loader']
-}
+    test: /\.tsx?$/,
+    exclude: /node_modules/,
+    loader: 'babel-loader'
+  },
+  {
+    test: /\.js$/,
+    exclude: /node_modules/,
+    loader: 'babel-loader'
+  },
+  {
+    test: /\.ts$/,
+    exclude: /node_modules/,
+    loader: 'babel-loader'
+  },
+  {
+    test: /\.s?css$/,
+    use: ['style-loader', 'css-loader', 'sass-loader']
+  },
+  {
+    test: /\.(png|j?g|svg|gif)?$/,
+    use: ['url-loader']
+  }
 ];
 
 module.exports = {
@@ -46,11 +46,9 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './index.html'
     }),
-    new CopyWebpackPlugin([
-      {
-        from: 'public'
-      }
-    ])
+    new CopyWebpackPlugin([{
+      from: 'public'
+    }])
   ],
   devServer: {
     contentBase: './',

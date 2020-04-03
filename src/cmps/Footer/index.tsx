@@ -13,7 +13,7 @@ export const Footer = (): JSX.Element => {
           <Links />
         </ul>
       </div>
-      <p>© 2020 by the creek Corp.</p>
+      <p>© 2020 By The Creek Corp.</p>
     </footer>
   );
 }

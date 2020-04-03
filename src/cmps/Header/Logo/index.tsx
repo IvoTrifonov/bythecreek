@@ -3,8 +3,6 @@ import styled from 'styled-components';
 import logoUrl from '../../../../public/site-logo.png';
 import { Link } from 'react-router-dom';
 
-console.log(logoUrl)
-
 const LogoStyle = styled.div`
   background: url(${logoUrl}) no-repeat center;
   background-size: contain;

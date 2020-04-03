@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { animated } from 'react-spring';
 
 const NavBar = styled(animated.nav)
-`   
+` display: block;  
   background-color: #fae7d5;
   letter-spacing: 0.7px;
   box-shadow: 1px 1px 2px 2px rgb(170, 169, 169);
