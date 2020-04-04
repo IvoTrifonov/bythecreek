@@ -11,8 +11,8 @@ const Search = (): JSX.Element => {
 
   return (
     <SearchWrapper>
-      <input ref={inputRef} type='text'></input>
       <span><FaSearch onClick={handleClick} /></span>
+      <input ref={inputRef} type='text' />
     </SearchWrapper>
   )
 }

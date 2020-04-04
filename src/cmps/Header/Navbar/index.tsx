@@ -17,10 +17,14 @@ const Navbar = ({ navbarState, handleNavbar }): JSX.Element => {
     <Fragment>
       <NavBar style={animation(barAnimationStyles)}>
         <FlexContainer style={animation(headerElementsAnimation)}>
+          <div style={{
+            'display': 'flex',
+          }}>
           <Logo />
+          <Search />
+          </div>
           <NavLinks>
             <Links />
-            <Search />
           </NavLinks>
           <BurgerWrapper>
             <BurgerMenu
@@ -28,6 +32,7 @@ const Navbar = ({ navbarState, handleNavbar }): JSX.Element => {
               handleNavbar={handleNavbar}
             />
           </BurgerWrapper>
+          
         </FlexContainer>
       </NavBar>
 
