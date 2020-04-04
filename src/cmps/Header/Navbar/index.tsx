@@ -12,7 +12,7 @@ import barAnimationStyles from '../../animations/styles/barAnimation';
 import headerElementsAnimation from '../../animations/styles/headerElementsAnimation';
 
 const Navbar = ({ navbarState, handleNavbar }): JSX.Element => {
-
+ 
   return (
     <Fragment>
       <NavBar style={animation(barAnimationStyles)}>
@@ -20,8 +20,8 @@ const Navbar = ({ navbarState, handleNavbar }): JSX.Element => {
           <div style={{
             'display': 'flex',
           }}>
-          <Logo />
-          <Search />
+            <Logo />
+            <Search />
           </div>
           <NavLinks>
             <Links />
@@ -32,7 +32,7 @@ const Navbar = ({ navbarState, handleNavbar }): JSX.Element => {
               handleNavbar={handleNavbar}
             />
           </BurgerWrapper>
-          
+
         </FlexContainer>
       </NavBar>
 

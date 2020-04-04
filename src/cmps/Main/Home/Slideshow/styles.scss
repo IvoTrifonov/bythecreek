@@ -1,0 +1,34 @@
+.slide-container {
+  width: 60%;
+  margin: 1em auto;
+
+  @media (max-width: 920px) {
+    width: 80%;
+  }
+
+  @media (max-width: 602px) {
+    width: 95%;
+  }
+
+  .each-slide > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+  } 
+
+  .each-fade {
+    display: flex;
+  }
+  
+  .each-fade .image-container {
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .each-fade .image-container img {
+    width: 100%;
+  }
+}
+
+
