@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import AnchorLink from 'react-anchor-link-smooth-scroll';
+import { Link, animateScroll as scroll } from "react-scroll";
 import { Switch, Route } from 'react-router-dom';
 import Home from './Home';
 import Login from './Login';
@@ -29,8 +29,6 @@ export const Main = (): JSX.Element => {
       <Route exact path='/signup' render={render(Register)} />
     </Switch>
 
-    {isLinkShowed &&
-      <AnchorLink href='#header'>
-      </AnchorLink>}
+    {isLinkShowed && <Link className='header-link' to='app-root' smooth={true} duration={550} />}
   </main>
 }
