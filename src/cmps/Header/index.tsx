@@ -11,7 +11,7 @@ export const Header = (): JSX.Element => {
   };
 
   return (
-    <header>
+    <header id='header'>
       <Navbar
         navbarState={navbarOpen}
         handleNavbar={handleNavbar}
