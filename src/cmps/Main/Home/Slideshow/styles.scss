@@ -1,6 +1,4 @@
 .slide-container {
-  border-radius: 0.3rem;
-  overflow: hidden;
   width: 60%;
   margin: 1em auto;
 
@@ -10,7 +8,7 @@
 
   @media (max-width: 602px) {
     width: 95%;
-  }
+  } 
 
   .each-slide > div {
     display: flex;

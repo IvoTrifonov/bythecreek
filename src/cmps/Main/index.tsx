@@ -29,6 +29,6 @@ export const Main = (): JSX.Element => {
       <Route exact path='/signup' render={render(Register)} />
     </Switch>
 
-    {isLinkShowed && <Link className='header-link' to='app-root' smooth={true} duration={550} />}
+    {isLinkShowed && <Link className='header-link' to='app-root' offset={-50} smooth={true} duration={550} />}
   </main>
 }

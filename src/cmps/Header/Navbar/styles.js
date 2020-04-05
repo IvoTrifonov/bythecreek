@@ -5,7 +5,7 @@ const NavBar = styled(animated.nav)
 ` display: block;  
   background-color: #fae7d5;
   letter-spacing: 0.7px;
-  box-shadow: 1px 1px 2px 2px rgb(170, 169, 169);
+  box-shadow: inset 0 -5px 5px -5px #c3b5a7;
   font-size: 1.1rem;
 `;
 
@@ -19,7 +19,7 @@ const FlexContainer = styled(animated.div)`
 
 const NavLinks = styled(animated.ul)
 `
-  margin: 0 0.7rem;
+  margin: 0 0.7em;
   display: flex;
   align-items: center;
   
