@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { animated } from 'react-spring';
 
 const SearchWrapper = styled(animated.div)`
-  margin-left: 1.5em;
+  margin: 0 0.2rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,6 +17,10 @@ const SearchWrapper = styled(animated.div)`
 
     :hover {
       transform: scale(1.25);
+    }
+
+    @media (max-width: 751px) {
+      margin: 0 1.6rem;
     }
   }
 

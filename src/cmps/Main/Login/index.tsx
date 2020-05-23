@@ -1,6 +1,5 @@
 import React, { useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
-import ContentWrapper from '../../../commonStyles/ContentWrapper';
 import Input from './Input';
 import useForm from '../../../customHooks/useForm';
 import StyledForm from '../../../commonStyles/FormStyles';
@@ -10,13 +9,18 @@ const Login = (): JSX.Element => {
   const errorMsgRef = useRef<HTMLParagraphElement>();
 
   const [errorMsg, setErrorMsg] = useState('');
+
   const { inputs, handleInputChange, handleSubmit } = useForm({
     username: '',
     password: ''
-  }, () => { }); //TODO: to add login function.
+  }, signIn);
+
+  function signIn(data) {
+    console.log(data);
+  }
 
   return (
-    <ContentWrapper>
+    <div>
       <StyledForm inputs={inputs} onSubmit={handleSubmit}>
         <p ref={errorMsgRef} className='errorMsg'>{errorMsg}</p>
         <div className='formContent' ref={formContentRef}>
@@ -45,7 +49,7 @@ const Login = (): JSX.Element => {
           <p className='signMsg'>Still unregistered? <Link to='/signup'>Sign Up</Link></p>
         </div>
       </StyledForm>
-    </ContentWrapper>
+    </div>
   );
 }
 

@@ -12,7 +12,7 @@ export const Main = (): JSX.Element => {
 
   useEffect(() => {
     const scrollhandler = () => {
-      window.pageYOffset > 20 ?
+      window.pageYOffset > 500 ?
         setIsLinkShowed(true) :
         setIsLinkShowed(false);
     };

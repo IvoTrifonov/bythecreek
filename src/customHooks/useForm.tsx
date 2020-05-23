@@ -5,7 +5,7 @@ const useLoginForm = (props, callback) => {
 
   const handleSubmit = (event: Event): void => {
     if (event) { event.preventDefault(); }
-    callback();
+    callback(inputs);
   };
 
   const handleInputChange = (event): void => {

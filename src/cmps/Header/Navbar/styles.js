@@ -1,15 +1,22 @@
 import styled from 'styled-components';
-import { animated } from 'react-spring';
+import {
+  animated
+} from 'react-spring';
 
 const NavBar = styled(animated.nav)
-` display: block;  
+` 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0.5em;
   background-color: #fae7d5;
   letter-spacing: 0.7px;
   box-shadow: inset 0 -5px 5px -5px #c3b5a7;
   font-size: 1.1rem;
 `;
 
-const FlexContainer = styled(animated.div)`
+const FlexContainer = styled(animated.div)
+`
   display: flex;
   padding: 0.2em 1rem;
   height: 3.5rem;
@@ -18,8 +25,7 @@ const FlexContainer = styled(animated.div)`
 `;
 
 const NavLinks = styled(animated.ul)
-`
-  margin: 0 0.7em;
+` 
   display: flex;
   align-items: center;
   
@@ -52,10 +58,10 @@ const NavLinks = styled(animated.ul)
   }
 `;
 
-const BurgerWrapper = styled.div`
+const BurgerWrapper = styled.div `
   margin: auto 0;
 
-  @media (min-width: 750px) {
+  @media (min-width: 751px) {
     display: none;
   }
 `;

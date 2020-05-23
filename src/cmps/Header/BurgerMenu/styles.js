@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const Wrapper = styled.div` 
+const Wrapper = styled.div ` 
   position: relative;
   padding-top: .4em;
   cursor: pointer;
@@ -18,8 +18,8 @@ const Wrapper = styled.div`
   }
 
   .open span:nth-child(2) {
-      opacity: 0;
-    }
+    opacity: 0;
+  }
 
   .open span:nth-child(3) {
     transform: rotate(45deg);

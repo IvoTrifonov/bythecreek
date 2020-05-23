@@ -21,11 +21,6 @@ const Links = (): JSX.Element => {
         </NavLink>
       </li>
       <li>
-        <NavLink activeClassName='active' exact to="/products">
-          Products
-        </NavLink>
-      </li>
-      <li>
         <NavLink activeClassName='active' exact to="/signin">
           Sign In
         </NavLink>

@@ -1,0 +1,35 @@
+.about-site-wrapper {
+  padding: 2.5em 1.2em;
+
+  h2 {
+    font-weight: 100;
+    font-size: 1.7rem;
+    white-space: nowrap;
+    color: #005240;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+
+    span { padding-bottom: 1.5em; }
+  }
+
+  p {
+    margin: 0 auto;
+    width: 65%;
+    line-height: 35px;
+    font-size: 1.1rem;
+    color: #352a29;
+
+    @media (max-width: 920px) {
+      width: 80%;
+    }
+    
+    @media (max-width: 750px) {
+      width: 90%;
+    }
+    
+    @media (max-width: 602px) {
+      width: 100%
+    }
+  }
+}

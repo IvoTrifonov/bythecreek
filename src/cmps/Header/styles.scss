@@ -5,6 +5,7 @@ header {
   & nav {
     background-color: #fae7d5;
   }
+
   @media only screen and (max-width: 750px) {
     & {
       position: fixed;
@@ -12,4 +13,3 @@ header {
     }
   }
 }
-

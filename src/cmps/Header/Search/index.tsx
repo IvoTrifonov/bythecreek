@@ -6,7 +6,7 @@ const Search = (): JSX.Element => {
   const inputRef = useRef<HTMLInputElement>();
 
   const handleClick = () => {
-    inputRef.current.className = inputRef.current.className !== 'open' && 'open';
+    // inputRef.current.className = inputRef.current.className !== 'open' && 'open';
   };
 
   return (

@@ -5,27 +5,22 @@ import CollapseMenu from "../CollapseMenu";
 import Search from '../Search';
 import Links from '../Links';
 import { NavBar, FlexContainer, NavLinks, BurgerWrapper } from './styles';
-import { animation } from '../../animations/hof/animation';
-
-
-import barAnimationStyles from '../../animations/styles/barAnimation';
-import headerElementsAnimation from '../../animations/styles/headerElementsAnimation';
 
 const Navbar = ({ navbarState, handleNavbar }): JSX.Element => {
- 
+
   return (
     <Fragment>
-      <NavBar style={animation(barAnimationStyles)}>
-        <FlexContainer style={animation(headerElementsAnimation)}>
+      <NavBar>
+        <Logo />
+        <FlexContainer>
           <div style={{
             'display': 'flex',
           }}>
-            <Logo />
-            <Search />
           </div>
           <NavLinks>
             <Links />
           </NavLinks>
+          <Search />
           <BurgerWrapper>
             <BurgerMenu
               navbarState={navbarState}

@@ -32,11 +32,6 @@ const CollaseLinks = ({ handleNavbar }): JSX.Element => {
         </NavLink>
       </li>
       <li>
-        <NavLink onClick={handleNavbar} exact to="/products">
-          Products
-        </NavLink>
-      </li>
-      <li>
         <NavLink onClick={handleNavbar} exact to="/signin">
           Sign In
         </NavLink>

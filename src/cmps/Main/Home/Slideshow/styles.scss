@@ -1,14 +1,18 @@
 .slide-container {
-  width: 60%;
+  width: 67%;
   margin: 1em auto;
-
+  
   @media (max-width: 920px) {
-    width: 80%;
+    width: 85%;
   }
 
   @media (max-width: 602px) {
-    width: 95%;
+    width: 100%;
   } 
+
+  .nav.data-type {
+    opacity: 0.3;
+  }
 
   .each-slide > div {
     display: flex;

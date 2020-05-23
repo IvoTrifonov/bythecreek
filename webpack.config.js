@@ -40,7 +40,7 @@ module.exports = {
     rules
   },
   resolve: {
-    extensions: ['.ts', '.tsx', '.js']
+    extensions: ['.ts', '.tsx', '.js'],
   },
   plugins: [
     new HtmlWebpackPlugin({
